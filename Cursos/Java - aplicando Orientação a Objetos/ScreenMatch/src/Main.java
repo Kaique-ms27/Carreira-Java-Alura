@@ -3,9 +3,10 @@ import br.com.alura.screenmatch.models.Movie;
 public class Main {
     public static void main(String[] args) {
         Movie myMovie = new Movie();
-        myMovie.name = "The Wolf of Wall Street";
-        myMovie.yearOfRelease = 2013;
-        myMovie.durationInMinutes = 179;
+        myMovie.setName("The Wolf of Wall Street");
+        myMovie.setYearOfRelease(2013);
+        myMovie.setDurationInMinutes(179);
+        myMovie.setIncludedInThePlane(true);
 
         myMovie.viewTechnicalSheet();
         myMovie.evaluate(8);
