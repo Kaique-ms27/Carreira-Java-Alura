@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class PricipalComBusca {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Digite um busca para busca");
+        System.out.println("Digite um filme para busca");
         var busca = sc.nextLine();
 
         // Endereço URL da api
