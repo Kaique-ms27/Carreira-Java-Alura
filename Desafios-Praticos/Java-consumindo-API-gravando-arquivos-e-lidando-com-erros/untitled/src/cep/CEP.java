@@ -1,4 +1,6 @@
 package cep;
 
-public record CEP() {
+public record CEP(String cep, String logradouro, String complemento,
+                  String bairro, String localidade, String uf) {
+
 }
