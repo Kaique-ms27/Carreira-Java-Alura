@@ -1,6 +1,8 @@
 package brt.com.alura.screenmatch;
 
+import brt.com.alura.screenmatch.model.DadosSeries;
 import brt.com.alura.screenmatch.service.ConsumoAPI;
+import brt.com.alura.screenmatch.service.ConverteDados;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,9 +16,18 @@ public class ScreenmatchApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-			String endereco = "http://www.omdbapi.com/?t=Suits&apikey=4e39c79e";
+		ConverteDados conversor = new ConverteDados();
+
+		// Endereço da API do IMDB
+		String endereco = "http://www.omdbapi.com/?t=Suits&apikey=4e39c79e";
 		var consumoAPI = new ConsumoAPI();
+
+		// Consumindo os dados da API
 		var json = consumoAPI.obterDados(endereco);
-		System.out.println(json);
+
+		// Converte os dados do json para apenas os dados da classe converteDados
+		DadosSeries dados = conversor.obterDados(json, DadosSeries.class);
+		// Exibir os dados
+		System.out.println(dados);
 	}
 }
