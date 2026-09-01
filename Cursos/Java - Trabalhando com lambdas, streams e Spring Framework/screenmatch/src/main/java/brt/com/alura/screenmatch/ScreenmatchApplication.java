@@ -1,5 +1,6 @@
 package brt.com.alura.screenmatch;
 
+import brt.com.alura.screenmatch.service.ConsumoAPI;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,6 +14,9 @@ public class ScreenmatchApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("Primeiro projeto Spring sem Web");
+			String endereco = "http://www.omdbapi.com/?t=Suits&apikey=4e39c79e";
+		var consumoAPI = new ConsumoAPI();
+		var json = consumoAPI.obterDados(endereco);
+		System.out.println(json);
 	}
 }
