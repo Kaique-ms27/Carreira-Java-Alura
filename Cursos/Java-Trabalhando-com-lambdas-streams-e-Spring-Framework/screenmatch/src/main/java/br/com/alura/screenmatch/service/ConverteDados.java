@@ -1,4 +1,4 @@
-package brt.com.alura.screenmatch.service;
+package br.com.alura.screenmatch.service;
 
 import tools.jackson.core.JacksonException;
 import tools.jackson.databind.json.JsonMapper;

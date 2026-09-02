@@ -1,9 +1,9 @@
-package brt.com.alura.screenmatch;
+package br.com.alura.screenmatch;
 
-import brt.com.alura.screenmatch.model.DadosEpisodios;
-import brt.com.alura.screenmatch.model.DadosSeries;
-import brt.com.alura.screenmatch.service.ConsumoAPI;
-import brt.com.alura.screenmatch.service.ConverteDados;
+import br.com.alura.screenmatch.model.DadosEpisodios;
+import br.com.alura.screenmatch.model.DadosSeries;
+import br.com.alura.screenmatch.service.ConsumoAPI;
+import br.com.alura.screenmatch.service.ConverteDados;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

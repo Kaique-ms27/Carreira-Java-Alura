@@ -1,4 +1,4 @@
-package brt.com.alura.screenmatch.service;
+package br.com.alura.screenmatch.service;
 
 // Interface para trabalhar com a inversão de dados para mais de um
 // modo de vídeo.

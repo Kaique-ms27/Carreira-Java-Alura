@@ -1,4 +1,4 @@
-package brt.com.alura.screenmatch.service;
+package br.com.alura.screenmatch.service;
 
 import java.io.IOException;
 import java.net.URI;
@@ -16,13 +16,10 @@ public class ConsumoAPI {
         try {
             response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
+        } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }
 
-        String json = response.body();
-        return json;
+        return response.body();
     }
 }
